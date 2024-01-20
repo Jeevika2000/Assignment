@@ -1,0 +1,92 @@
+Assignment 1:
+
+Def print_shortest_substrings(s,  x):
+       substrings=[]
+       
+       for i in range(lens(s)):
+             for j in range(i+x-1, len(s)):
+	         if s[i] = = s[j]:
+		substring = s[i:j+1]
+		if len(substring)>=x and (not substrings or len
+		         (substring) = = len(substrings[0])):
+			substrings.append(substring)
+                    elif len(substring) < len(substrings[0]):
+                                 substrings = [substring]
+if substrings:
+	for substrings in substrings:
+		print(substrings)
+else:
+print(“not-found”)
+# Example usage
+s = "abccdbacca"
+x = 3
+print("x =", x)
+print_shortest_substrings(s, x)
+
+x = 4
+print("\nx =", x)
+print_shortest_substrings(s, x)
+
+x = 5
+print("\nx =", x)
+print_shortest_substrings(s, x)
+
+x = 6
+print("\nx =", x)
+print_shortest_substrings(s, x)
+
+x = 7
+print("\nx =", x)
+print_shortest_substrings(s, x)
+
+x = 8
+print("\nx =", x)
+print_shortest_substrings(s, x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment 2:
+
+def transform_string(s):
+    result = []
+    for i in range(len(s)):
+        ascii_val = ord(s[i])
+            if i > 0 and (ascii_val % 2 == 0):
+            new_ascii = ascii_val + (ascii_val % 7)
+            result.append(chr(new_ascii))
+        		elif i < len(s) - 1 and (ascii_val % 2 == 1):
+            	new_ascii = ascii_val - (ascii_val % 5)
+            result[-1] = chr(new_ascii) if new_ascii >= 0 and new_ascii <= 127 else chr(83)
+        else:
+            result.append(s[i])
+    return ''.join(result)
+
+# Example usage
+s = "sHQen}"
+result = transform_string(s)
+print("Original string:", s)
+print("Transformed string:", result)
